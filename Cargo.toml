@@ -1,0 +1,15 @@
+[package]
+name = "echo-sim"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+config = "0.15.27"
+duration-str = "0.21.0"
+nexosim = "1.0.0"
+num-traits = "0.2.19"
+rand = { version = "0.10.3", features = ["serde"] }
+rand_distr = { version = "0.6.0", features = ["serde"] }
+serde = "1.0.229"
+serde-saphyr = "2.1.1"
+uuid = { version = "1.29.2", features = ["v4", "serde"] }

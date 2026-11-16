@@ -1,0 +1,195 @@
+seed: 0
+message_generation:
+  participation:
+    - min: 2
+      max: 2
+      weights:
+        - 0.5504449314953347
+        - 0.44955506850466537
+    - min: 3
+      max: 3
+      weights:
+        - 0.49933300232976713
+        - 0.31253306098350225
+        - 0.1881339366867306
+    - min: 4
+      max: 4
+      weights:
+        - 0.41534150638988354
+        - 0.2883037448251664
+        - 0.18898707003802667
+        - 0.10736767874692332
+    - min: 5
+      max: 5
+      weights:
+        - 0.36637339321082907
+        - 0.2627983018595241
+        - 0.19184990010702116
+        - 0.17897840482262561
+    - min: 6
+      max: 6
+      weights:
+        - 0.35433097176899536
+        - 0.2452045452633708
+        - 0.1751401536288871
+        - 0.2253243293387467
+    - min: 7
+      max: 7
+      weights:
+        - 0.3336614951841645
+        - 0.22085774188250346
+        - 0.16694227236054196
+        - 0.2785384905727901
+    - min: 8
+      max: 8
+      weights:
+        - 0.3264768854808429
+        - 0.20691182633260274
+        - 0.15185910644384612
+        - 0.31475218174270814
+    - min: 9
+      max: 9
+      weights:
+        - 0.2965216175797816
+        - 0.20203959570071775
+        - 0.15227730083696317
+        - 0.34916148588253737
+    - min: 10
+      max: 10
+      weights:
+        - 0.2732466785753908
+        - 0.1968008078745602
+        - 0.14946696835619014
+        - 0.3804855451938589
+    - min: 11
+      max: 30
+      weights:
+        - 0.22635174898110505
+        - 0.15051699597420728
+        - 0.11513388885517198
+        - 0.5079973661895159
+    - min: 31
+      weights:
+        - 0.13131430067700217
+        - 0.08133802324126005
+        - 0.06412765283331638
+        - 0.7232200232484215
+  iat_distribution:
+    type: mixture
+    components:
+      - weight: 0.7473
+        distribution:
+          type: truncated
+          max: 100.0
+          distribution:
+            type: affine
+            offset: -1.84465851
+            distribution:
+              type: exp
+              lambda: 0.0480334
+      - weight: 0.2019
+        distribution:
+          type: truncated
+          min: 100.0
+          max: 3600.0
+          distribution:
+            type: affine
+            offset: -102.53068022
+            distribution:
+              type: exp
+              lambda: 0.00126091
+      - weight: 0.0465
+        distribution:
+          type: truncated
+          min: 3600.0
+          max: 86400.0
+          distribution:
+            type: affine
+            offset: -2044.6938363
+            distribution:
+              type: exp
+              lambda: 4.75841878e-5
+      - weight: 0.0043
+        distribution:
+          type: affine
+          scale: 86400.0
+          distribution:
+            type: truncated
+            min: 1.0
+            distribution:
+              type: affine
+              offset: 0.84769158
+              distribution:
+                type: exp
+                lambda: 0.6303
+      # - weight: 0.7473
+      #   distribution:
+      #     type: truncated
+      #     max: 100.0
+      #     distribution:
+      #       type: shifted
+      #       offset: -1.84465851
+      #       distribution:
+      #         type: exp
+      #         lambda: 0.0480334
+      # - weight: 0.2019
+      #   distribution:
+      #     type: truncated
+      #     min: 100.0
+      #     max: 3600.0
+      #     distribution:
+      #       type: shifted
+      #       offset: -102.53068022
+      #       distribution:
+      #         type: exp
+      #         lambda: 0.00126091
+      # - weight: 0.0465
+      #   distribution:
+      #     type: truncated
+      #     min: 3600.0
+      #     max: 86400.0
+      #     distribution:
+      #       type: shifted
+      #       offset: -2044.6938363
+      #       distribution:
+      #         type: exp
+      #         lambda: 4.75841878e-5
+      # - weight: 0.0043
+      #   distribution:
+      #     type: scaled
+      #     factor: 86400.0
+      #     distribution:
+      #       type: truncated
+      #       min: 1.0
+      #       distribution:
+      #         type: shifted
+      #         offset: 0.84769158
+      #         distribution:
+      #           type: exp
+      #           lambda: 0.6303
+  # iat_distribution:
+  #   type: truncated_shifted_hyperexponential
+  #   components:
+  #     - p: 0.7473
+  #       lambda: 0.0480334
+  #       shift: -0.08860522
+  #       min: 0.0
+  #       max: 100.0
+  #       unit: 1.0
+  #     - p: 0.2019
+  #       lambda: 0.00126091
+  #       shift: -0.12928196
+  #       min: 100.0
+  #       max: 3600.0
+  #       unit: 1.0
+  #     - p: 0.0465
+  #       lambda: 4.75841878e-5
+  #       shift: -9.72950955e-2
+  #       min: 3600.0
+  #       max: 86400.0
+  #       unit: 1.0
+  #     - p: 0.0043
+  #       lambda: 0.6303
+  #       shift: 0.5343
+  #       min: 1.0
+  #       unit: 86400.0
